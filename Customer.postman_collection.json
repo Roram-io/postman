@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "af5ef4b1-a69a-4e69-bb8e-4670cc51270a",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Regular\",\r\n    \"nationalId\": \"74053520\",\r\n    \"name\": \"Rodrigo Agama\",\r\n    \"phone\": \"926874505\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8883/api/v1/customer/save"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Customer by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8883/api/v1/customer/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Regular\",\r\n    \"id\": \"ed618ac4-3bff-4621-b95a-f56840c75da7\",\r\n    \"nationalId\": \"74053520\",\r\n    \"name\": \"Rodrigo Agama\",\r\n    \"phone\": \"926874505\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8883/api/v1/customer/update"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8883/api/v1/customer/delete/Regular"
+			},
+			"response": []
+		}
+	]
+}

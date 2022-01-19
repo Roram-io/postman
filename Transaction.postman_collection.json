@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "40c5a43a-ac5c-4181-9165-1238944b8e4f",
+		"name": "Transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"productId\":\"producto\",\r\n\"userId\": \"usuario\",\r\n\"transactionAmount\": 3000,\r\n\"Date\": \"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8884/api/v1/transaction/save"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8884/api/v1/transaction/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Transaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8884/api/v1/transaction/delete/abe4f5ba-93fa-400d-820a-39ead94c9d14"
+			},
+			"response": []
+		}
+	]
+}

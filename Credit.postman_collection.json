@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "93b1d622-1f7a-4899-9312-4b67a2e3cf7e",
+		"name": "Credit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"holder\": \"44e1cb91-7c81-41dd-b743-1a72f23a5399\",\r\n    \"maxCred\": 20000.0,\r\n    \"currentAmount\": 7500.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8882/api/v1/credit/save"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Credit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8882/api/v1/credit/holder/44e1cb91-7c81-41dd-b743-1a72f23a5399"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Credit",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8882/api/v1/credit/delete/193b1376-c174-4ee4-9be9-ba94e72e1195"
+			},
+			"response": []
+		}
+	]
+}

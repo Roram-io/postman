@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "c751a933-77d3-489e-ab3f-d49aa3835c9b",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Bank Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"Savings\",\r\n\"holder\": \"44e1cb91-7c81-41dd-b743-1a72f23a5399\",\r\n\"amount\": 22.30,\r\n\"transactionLimit\": 20,\r\n\"allowedHolders\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8881/api/v1/bankaccount/save"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8881/api/v1/bankaccount/holder/44e1cb91-7c81-41dd-b743-1a72f23a5399"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"type\": \"FixedTerm\",\r\n        \"id\": \"3e74b057-2f09-4b6c-b97a-20a803bf22a2\",\r\n        \"holder\": \"44e1cb91-7c81-41dd-b743-1a72f23a5399\",\r\n        \"amount\": 123.0,\r\n        \"transactionLimit\": 2,\r\n        \"allowedHolders\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8881/api/v1/bankaccount/update"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8881/api/v1/bankaccount/delete/3e74b057-2f09-4b6c-b97a-20a803bf22a2"
+			},
+			"response": []
+		}
+	]
+}
